@@ -1,5 +1,6 @@
 package com.tdd.demo;
 
+@Service
 public class EvenOddService {
 
     public String isOddNumber(int inputNumber) {

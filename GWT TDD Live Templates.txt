@@ -88,3 +88,13 @@ propertyName / decapitalize(property)/ / checked
 
 Make sure you select "Applicable in .." and have all Java contexts
 
+--------------------------------------------------------------------------
+//init
+@BeforeEach
+public void init() {
+    MockitoAnnotations.initMocks(this);
+}
+
+NO VARS
+Make sure you select "Applicable in .." and have all Java contexts
+
