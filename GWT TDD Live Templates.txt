@@ -1,0 +1,90 @@
+
+
+Settings > Editor > Live Templates > Java
+--------------------------------------------------------------------------
+//given
+
+@DisplayName("Given $displayName$")
+@Nested
+class Given$methodName$ {
+    
+    
+}
+
+VARS
+displayName / / / unchecked
+
+methodName /capitalize(camelCase(displayName)) / / unchecked
+
+Make sure you select "Applicable in .." and have all Java contexts
+
+--------------------------------------------------------------------------
+//healthCheck
+
+@Test
+
+public void testHealthCheck() {
+    Assert.assertTrue(true);
+    XXXXXXXX actualObject = new XXXXXXXX();
+    Assert.assertNotNull(actualObject);
+}
+
+@Test
+public void providedTest() {
+    XXXXXXXX yyyyyyy = new XXXXXXXX();
+    assertEquals( AAAAA, BBBBB); 
+}
+
+VARS
+
+NONE
+Make sure you select "Applicable in .." and have all Java contexts
+
+--------------------------------------------------------------------------
+then
+
+@DisplayName("Then $displayName$") 
+@Test
+public void then$methodName$() { 
+    
+    
+}
+
+VARS
+displayName / / / unchecked
+methodName /capitalize(camelCase(displayName)) / / unchecked
+
+Make sure you select "Applicable in .." and have all Java contexts
+
+--------------------------------------------------------------------------
+when
+
+@DisplayName("When $displayName$")
+@Nested
+class When$methodName$ {
+
+
+}
+
+VARS
+displayName / / / unchecked
+methodName /capitalize(camelCase(displayName)) / / unchecked
+
+Make sure you select "Applicable in .." and have all Java contexts
+
+--------------------------------------------------------------------------
+// with
+
+public $T$ with$property$($propertyType$ $propertyName$){
+    this.set$property$($propertyName$);
+    return this;
+}
+
+VARS
+T / className() / / checked
+property / / / unchecked
+propertyType / typeOfVariable(decapitalize(property))/ / checked
+propertyName / decapitalize(property)/ / checked
+
+Make sure you select "Applicable in .." and have all Java contexts
+
