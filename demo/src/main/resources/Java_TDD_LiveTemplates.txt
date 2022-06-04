@@ -1,0 +1,83 @@
+Editor > Live Templates
+
+Add Template Group > call it "TDD Java"
+
+
+
+@BeforeEach
+public void init(){
+  MockitoAnnotations.initMocks(this);
+  // consider adding healthcheck method below this init()
+}
+
+====
+
+@Test
+public void healthCheck() {
+    Assert.assertTrue(true);
+
+    MyService service = new MyService();
+    Assert.assertNotNull(service);
+}
+
+====
+
+public $T$ with$property$($propertyType$ $propertyName$){
+  this.set$property$($propertyName$)
+  return this;
+}
+
+VARS:
+T     className()   check
+property nocheck
+propertyType typeOfVariable(decapitalize(property))   check
+propertyName decapitalize(property)   check
+
+===
+
+@DisplayName("Then $displayName$")
+@Test
+void then$methodName$(){
+
+}
+
+VARS:
+displayName       unchecked
+methodName    capitalize(camelCase(displayName))  unchecked
+
+====
+
+@DisplayName("Given $displayName$")
+@Nested
+class Given$methodName${
+
+}
+
+VARS:
+displayName       unchecked
+methodName    capitalize(camelCase(displayName))  unchecked
+
+====
+
+@DisplayName("When $displayName$")
+@Nested
+class When$methodName${
+
+}
+
+VARS:
+displayName       unchecked
+methodName    capitalize(camelCase(displayName))  unchecked
+
+====
+
+@DisplayName("Then $displayName$")
+@Test
+void then$methodName$(){
+
+}
+
+VARS:
+displayName       unchecked
+methodName    capitalize(camelCase(displayName))  unchecked
+
