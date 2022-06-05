@@ -70,7 +70,8 @@ class ArrayMathUtilityTest {
                 Mockito.doReturn(false).when(evenOddService).isOddNumber(anyInt());
 
                 String actual = arrayUtilitySpringService.determineArraySumOddEven(new int[]{1, 9});
-                verify(evenOddService).isOddNumber(10);
+                verify(evenOddService).isOddNumber(10); // 'verify' needs to go after actual exe
+
 
                 Assert.assertTrue(actual.equalsIgnoreCase("even"));
             }
