@@ -8,5 +8,7 @@ import lombok.*;
 @Data
 public class UserMembershipDetails {
 
+    private String userFirstName;
+    private String userNumber;
     private boolean isEnabled;
 }
