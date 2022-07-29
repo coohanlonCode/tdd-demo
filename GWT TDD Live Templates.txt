@@ -12,11 +12,10 @@ class Given$methodName$ {
 }
 
 VARS
-displayName / / / unchecked
+- displayName / <leave blank> / <leave blank> / unchecked
+- methodName / capitalize(camelCase(displayName)) / <leave blank> / unchecked
 
-methodName /capitalize(camelCase(displayName)) / / unchecked
-
-Make sure you select "Applicable in .." and have all Java contexts
+- Make sure you select "Applicable in .." and have all Java contexts
 
 --------------------------------------------------------------------------
 //healthCheck
@@ -36,9 +35,9 @@ public void providedTest() {
 }
 
 VARS
+- No variables
 
-NONE
-Make sure you select "Applicable in .." and have all Java contexts
+- Make sure you select "Applicable in .." and have all Java contexts
 
 --------------------------------------------------------------------------
 then
@@ -51,10 +50,10 @@ public void then$methodName$() {
 }
 
 VARS
-displayName / / / unchecked
-methodName /capitalize(camelCase(displayName)) / / unchecked
+- displayName / <leave blank>/ <leave blank> / unchecked
+- methodName / capitalize(camelCase(displayName)) /<leave blank> / unchecked
 
-Make sure you select "Applicable in .." and have all Java contexts
+- Make sure you select "Applicable in .." and have all Java contexts
 
 --------------------------------------------------------------------------
 when
@@ -67,10 +66,10 @@ class When$methodName$ {
 }
 
 VARS
-displayName / / / unchecked
-methodName /capitalize(camelCase(displayName)) / / unchecked
+- displayName / <leave blank> / <leave blank> / unchecked
+- methodName / capitalize(camelCase(displayName)) / <leave blank> / unchecked
 
-Make sure you select "Applicable in .." and have all Java contexts
+- Make sure you select "Applicable in .." and have all Java contexts
 
 --------------------------------------------------------------------------
 // with
@@ -81,20 +80,24 @@ public $T$ with$property$($propertyType$ $propertyName$){
 }
 
 VARS
-T / className() / / checked
-property / / / unchecked
-propertyType / typeOfVariable(decapitalize(property))/ / checked
-propertyName / decapitalize(property)/ / checked
+- T / className() / <leave blank> / checked
+- property / <leave blank> / <leave blank> / unchecked
+- propertyType / typeOfVariable(decapitalize(property)) / <leave blank> / checked
+- propertyName / decapitalize(property) / <leave blank> / checked
 
-Make sure you select "Applicable in .." and have all Java contexts
+- Make sure you select "Applicable in .." and have all Java contexts
 
 --------------------------------------------------------------------------
 //init
+
 @BeforeEach
 public void init() {
     MockitoAnnotations.initMocks(this);
 }
 
-NO VARS
-Make sure you select "Applicable in .." and have all Java contexts
+VARS
+- No variables
 
+- Make sure you select "Applicable in .." and have all Java contexts
+
+--------------------------------------------------------------------------

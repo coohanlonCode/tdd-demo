@@ -1,0 +1,17 @@
+
+Make sure the annotation processor is enabled
+
+Preferences | Build, Execution, Deployment | Compiler | Annotation Processors -> "Enable annotation processing" is YES-checked
+--------------------------------------------------------------------------
+Preferences | Build, Execution, Deployment | Build Tools | Annotation Processors -> Gradle
+    - Build and run using IntelliJ
+    - Run testing using IntelliJ
+** then restart IDE
+
+
+--------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------
+
+
