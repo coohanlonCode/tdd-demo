@@ -1,0 +1,107 @@
+Settings > Editor > Live Templates > Java
+
+
+--------------------------------------------------------------------------
+//"initOpenMocksHealthCheck"
+
+@BeforeEach
+public void init(){
+  MockitoAnnotations.openMocks(this);
+}
+
+@Test
+public void healthCheck() {
+    Assertions.assertTrue(true);
+
+    Assertions.assertNotNull(COMPONENT_FROM_ABOVE);
+    $END$// don't forget to openMocks! ('init' LiveTemplate)
+}
+
+VARS
+- No variables
+
+- Make sure you select "Applicable in .." and have all Java contexts
+
+
+--------------------------------------------------------------------------
+//"given"
+
+@DisplayName("Given $displayName$")
+@Nested
+class Given$methodName$ {
+    $END$
+}
+
+VARS
+- displayName / <leave blank> / <leave blank> / unchecked
+- methodName / capitalize(camelCase(displayName)) / <leave blank> / unchecked
+
+- Make sure you select "Applicable in .." and have all Java contexts
+
+
+--------------------------------------------------------------------------
+// "when"
+
+@DisplayName("When $displayName$")
+@Nested
+class When$methodName$ {
+    $END$
+}
+
+VARS
+- displayName / <leave blank> / <leave blank> / unchecked
+- methodName / capitalize(camelCase(displayName)) / <leave blank> / unchecked
+
+- Make sure you select "Applicable in .." and have all Java contexts
+
+
+--------------------------------------------------------------------------
+//"then"
+
+@DisplayName("Then $displayName$")
+@Test
+public void then$methodName$() {
+    $END$
+}
+
+VARS
+- displayName / <leave blank>/ <leave blank> / unchecked
+- methodName / capitalize(camelCase(displayName)) /<leave blank> / unchecked
+
+- Make sure you select "Applicable in .." and have all Java contexts
+
+
+--------------------------------------------------------------------------
+// "with"
+
+public $T$ with$property$($propertyType$ $propertyName$){
+    this.set$property$($propertyName$);
+    return this;
+}
+
+VARS
+- T / className() / <leave blank> / checked
+- property / <leave blank> / <leave blank> / unchecked
+- propertyType / typeOfVariable(decapitalize(property)) / <leave blank> / checked
+- propertyName / decapitalize(property) / <leave blank> / checked
+
+- Make sure you select "Applicable in .." and have all Java contexts
+
+
+--------------------------------------------------------------------------
+// "gwt_oneLiner"
+
+@DisplayName("$displayName$")
+@Test
+void $methodName$(){
+    $END$
+}
+
+VARS
+- displayName / <leave blank>/ <leave blank> / unchecked
+- methodName / capitalize(camelCase(displayName)) /<leave blank> / unchecked
+
+- Make sure you select "Applicable in .." and have all Java contexts
+
+
+--------------------------------------------------------------------------

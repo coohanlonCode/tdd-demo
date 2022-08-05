@@ -11,12 +11,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AdHocServiceTest {
 
-
-
     @Spy
     @InjectMocks
     AdHocService service;
-
 
     @Test
     public void healthCheck() {

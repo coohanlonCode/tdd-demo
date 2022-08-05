@@ -1,6 +1,6 @@
 package com.tdd.demo.controller;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -28,7 +28,7 @@ class InfoUtilitiesControllerTest {
     // Sanity Check
     @Test
     public void contextLoads() {
-        Assert.assertNotNull(infoUtilitiesController);
+        Assertions.assertNotNull(infoUtilitiesController);
     }
 
     // Testing Option #1
@@ -57,7 +57,7 @@ class InfoUtilitiesControllerTest {
 
                 boolean stringMatchAsExpected = expected.equals(actual);
 
-                Assert.assertTrue(stringMatchAsExpected);
+                Assertions.assertTrue(stringMatchAsExpected);
             }
         }
     }

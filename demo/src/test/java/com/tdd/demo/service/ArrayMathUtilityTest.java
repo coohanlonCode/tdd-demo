@@ -1,12 +1,6 @@
 package com.tdd.demo.service;
 
-import com.tdd.demo.service.ArrayMathUtility;
-import com.tdd.demo.service.EvenOddService;
-import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.mockito.*;
 
 import static org.mockito.ArgumentMatchers.anyInt;
@@ -28,10 +22,10 @@ class ArrayMathUtilityTest {
 
     @Test
     public void testHealthCheck() {
-        Assert.assertTrue(true);
+        Assertions.assertTrue(true);
 
-        Assert.assertNotNull(arrayUtilitySpringService);
-        Assert.assertNotNull(evenOddService);
+        Assertions.assertNotNull(arrayUtilitySpringService);
+        Assertions.assertNotNull(evenOddService);
     }
 
     @DisplayName("Given determineArraySumOddEven")
@@ -56,7 +50,7 @@ class ArrayMathUtilityTest {
 
                 boolean matchesAsExpected = actual.equalsIgnoreCase("odd");
 
-                Assert.assertTrue(matchesAsExpected);
+                Assertions.assertTrue(matchesAsExpected);
             }
         }
 
@@ -73,7 +67,7 @@ class ArrayMathUtilityTest {
                 verify(evenOddService).isOddNumber(10); // 'verify' needs to go after actual exe
 
 
-                Assert.assertTrue(actual.equalsIgnoreCase("even"));
+                Assertions.assertTrue(actual.equalsIgnoreCase("even"));
             }
         }
 
@@ -88,7 +82,7 @@ class ArrayMathUtilityTest {
 
                 Mockito.doReturn(false).when(evenOddService).isOddNumber(anyInt());
                 String actual = arrayUtilitySpringService.determineArraySumOddEven(new int[]{});
-                Assert.assertTrue(actual.equalsIgnoreCase("even"));
+                Assertions.assertTrue(actual.equalsIgnoreCase("even"));
 
             }
         }

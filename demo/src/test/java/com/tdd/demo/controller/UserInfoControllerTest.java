@@ -4,11 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tdd.demo.model.request.UserInfoRequest;
 import com.tdd.demo.model.response.UserMembershipDetails;
 import com.tdd.demo.service.UserUtilities;
-import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,10 +39,10 @@ class UserInfoControllerTest {
 
     @Test
     public void healthCheck() {
-        Assert.assertTrue(true);
+        Assertions.assertTrue(true);
 
-        Assert.assertNotNull(mockMvc);
-        Assert.assertNotNull(userUtilities);
+        Assertions.assertNotNull(mockMvc);
+        Assertions.assertNotNull(userUtilities);
     }
 
     private int port = 8080;
@@ -85,7 +81,7 @@ class UserInfoControllerTest {
 
                 String responseBodyAsJsonString = result.getResponse().getContentAsString();
                 UserMembershipDetails responseBody = objectMapper.readValue(responseBodyAsJsonString, UserMembershipDetails.class);
-                Assert.assertNotNull(responseBody);
+                Assertions.assertNotNull(responseBody);
             }
 
 

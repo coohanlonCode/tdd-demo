@@ -1,18 +1,13 @@
 package com.tdd.demo.service;
 
 import com.tdd.demo.model.response.UserMembershipDetails;
-import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class SorterExamplesTest {
 
@@ -31,8 +26,8 @@ class SorterExamplesTest {
 
     @Test
     public void healthCheck() {
-        Assert.assertTrue(true);
-        Assert.assertNotNull(sorterExamples);
+        Assertions.assertTrue(true);
+        Assertions.assertNotNull(sorterExamples);
     }
 
     @DisplayName("Given getLargestNumber1")
@@ -51,12 +46,12 @@ class SorterExamplesTest {
                 int expectedLargestInteger = 264;
 
                 int actual = sorterExamples.getLargestNumber1(numbersArray);
-                Assert.assertTrue(actual == expectedLargestInteger);
+                Assertions.assertTrue(actual == expectedLargestInteger);
 
                 numbersArray = new int[]{1, 4, 676, 12, 44, 5, 264, 10, 56, 43, 32, 104, 64};
                 actual = sorterExamples.getLargestNumber1(numbersArray);
                 expectedLargestInteger = 676;
-                Assert.assertTrue(actual == expectedLargestInteger);
+                Assertions.assertTrue(actual == expectedLargestInteger);
             }
         }
     }
@@ -81,7 +76,7 @@ class SorterExamplesTest {
 
                     if (i == (unsortedArray.length - 1)) break;
 
-                    Assert.assertTrue(actualArray[i] <= actualArray[i + 1]);
+                    Assertions.assertTrue(actualArray[i] <= actualArray[i + 1]);
                 }
             }
         }
@@ -107,7 +102,7 @@ class SorterExamplesTest {
 
                     if (i == (unsortedArray.length - 1)) break;
 
-                    Assert.assertTrue(actualArray[i] >= actualArray[i + 1]);
+                    Assertions.assertTrue(actualArray[i] >= actualArray[i + 1]);
                 }
             }
         }
@@ -138,10 +133,10 @@ class SorterExamplesTest {
 
                 List<String> actualList = sorterExamples.sortNamesVowelsFirst(inputList);
 
-                Assert.assertNotNull(actualList);
-                Assert.assertTrue(!actualList.isEmpty());
-                Assert.assertTrue(actualList.size() == expectedList.size());
-                Assert.assertEquals(expectedList , actualList);
+                Assertions.assertNotNull(actualList);
+                Assertions.assertTrue(!actualList.isEmpty());
+                Assertions.assertTrue(actualList.size() == expectedList.size());
+                Assertions.assertEquals(expectedList , actualList);
             }
         }
     }
